@@ -1,0 +1,84 @@
+.Root {
+  @apply full-size flex items-center justify-center;
+}
+
+.Form {
+  /* Overrides */
+  @apply border-none !shadow-none bg-neutral-lightest laptop:bg-white laptop:border laptop:border-solid laptop:border-neutral-dark laptop:rounded-none laptop:focus-within:border-transparent laptop:focus-within:ring-2 laptop:focus-within:ring-brand-nebula;
+}
+
+.Input {
+  @apply body-regular text-brand-black;
+}
+
+.Input::placeholder {
+  @apply text-neutral-darkest;
+}
+
+.SubmitButton,
+.LoadingIndicator {
+  @apply w-auto;
+}
+
+.Label svg,
+.LoadingIndicator svg {
+  @apply text-brand-black;
+}
+
+.Panel {
+  @apply !top-0 !left-0 rounded-none shadow-medium mt-4;
+}
+
+.aa-PanelLayout {
+  @apply px-4 py-6 flex flex-col gap-4;
+}
+
+.DetachedSearchButton {
+  @apply full-size flex flex-row-reverse items-center justify-between;
+
+  /* Overrides */
+  @apply p-0 border-none;
+}
+
+.DetachedSearchButtonIcon {
+  @apply text-brand-black w-auto;
+}
+
+.DetachedSearchButtonPlaceholder {
+  @apply text-neutral-darkest;
+
+  /* Overrides */
+  @apply body-regular;
+}
+
+.aa-DetachedFormContainer {
+  @apply bg-neutral-lightest border-none;
+}
+
+.aa-SourceHeader {
+  @apply mt-0;
+}
+
+.aa-SourceHeaderTitle {
+  @apply body-regular text-neutral-dark font-normal;
+}
+
+.aa-Item[aria-selected=true] {
+  @apply bg-neutral-lightest;
+}
+
+.aa-ItemContent {
+  @apply gap-2;
+}
+
+.aa-ItemIcon {
+  @apply w-auto;
+}
+
+.aa-ItemIcon svg {
+  @apply w-6 h-6 text-brand-black;
+}
+
+.aa-ItemActionButton svg {
+  @apply w-5 h-5;
+}
