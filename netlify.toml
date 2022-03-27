@@ -1,0 +1,19 @@
+[build]
+  command = "npm run build"
+  publish = "out"
+
+[functions]
+  node_bundler = "esbuild"
+  external_node_modules = ["sharp", "@ampproject/toolbox-optimizer"]
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[[plugins]]
+  package = "@netlify/plugin-lighthouse"
+
+  [plugins.inputs]
+    output_path = "reports/lighthouse.html"
+
+  [[plugins.inputs.audits]]
+    path = "./"
